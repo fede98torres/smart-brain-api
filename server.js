@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res)=> { res.send(db.users) })
+app.get("/", (req, res) => { res.send("it's working!") });
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) }) // Register.handleRegister will get the request response so that when register endpoint gets hit it'll receive the request and response and get called with it.
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)}) //remember that if we do it with this syntax [:id] that means we can enter in our browser anything (for example /profile/123) and we'll be able to grab this 'id' (123 in the example) through the 'req.params' property
