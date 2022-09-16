@@ -13,7 +13,7 @@ const db = knex({
     // Enter your own database information here based on what you created
     client: 'pg',
     connection: {
-        host: '127.0.0.1', //localhost is the same thing as this number 127.0.0.1
+        host: 'postgresql-octagonal-17977', //localhost is the same thing as this number 127.0.0.1
         port: 5432,
         user: 'postgres',// here we enter the passord that we assign in the installation of postgressql
         password: 'test',
