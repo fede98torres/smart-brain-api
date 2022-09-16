@@ -79,7 +79,9 @@ app.put('/image', (req, res) => {
 })
 */
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
+    });
 
 /*
 We also want to have a 'signin' route because well we want people to sign in and this 'signin' will most
